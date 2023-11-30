@@ -48,7 +48,7 @@ services:
    - ./zabbix/zbx_env/etc/zabbix/zabbix_agentd.d:/etc/zabbix/zabbix_agentd.d:ro
    - ./zabbix/zbx_env/var/lib/zabbix/modules:/var/lib/zabbix/modules:ro
    - ./zabbix/zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
-   - ./zabbix/zbx_env/var/lib/zabbix/ssh_keys:/var/lib/zabbix/ssh_keys:ro
+   - ./zabbix/env_vars/PSK:/var/lib/zabbix/ssh_keys:ro
   env_file:
    - ./zabbix/env_vars/.env_agent
   privileged: true
