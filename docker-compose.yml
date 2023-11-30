@@ -49,7 +49,6 @@ services:
    - ./zabbix/zbx_env/var/lib/zabbix/modules:/var/lib/zabbix/modules:ro
    - ./zabbix/zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
    - ./zabbix/zbx_env/var/lib/zabbix/ssh_keys:/var/lib/zabbix/ssh_keys:ro
-   - go:/var/lib/zabbix:rw
   env_file:
    - ./zabbix/env_vars/.env_agent
   privileged: true
@@ -80,4 +79,3 @@ networks:
     internal: true
 volumes:
   snmptraps:
-  go:
