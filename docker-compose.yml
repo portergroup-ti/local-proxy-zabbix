@@ -38,7 +38,7 @@ services:
    com.zabbix.os: "alpine"
 
  zabbix-agent:
-  image: zabbix/zabbix-agent:alpine-6.0-latest
+  image: portergroup/zabbix-agent-alpine-6.0:lastest
   restart: always
   ports:
    - "10050:10050"
@@ -59,13 +59,13 @@ services:
      - zabbix-agent
      - zabbix-agent-passive
      - zabbix-agent-alpine
+   zbx_net_frontend:
   stop_grace_period: 5s
   labels:
    com.zabbix.description: "Zabbix agent"
    com.zabbix.company: "Zabbix LLC"
    com.zabbix.component: "zabbix-agentd"
    com.zabbix.os: "alpine"
-
 
 networks:
   zbx_net_frontend:
